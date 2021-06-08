@@ -6,3 +6,9 @@ node_modules
 # CDK asset staging directory
 .cdk.staging
 cdk.out
+
+
+src/Functions/**/bin
+src/Functions/**/obj
+
+src/Functions/**/*.zip
