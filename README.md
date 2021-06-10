@@ -1,4 +1,4 @@
-# Welcome to your CDK TypeScript project!
+# CDK Example
 
 ## Usage
 
