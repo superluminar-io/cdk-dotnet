@@ -25,11 +25,11 @@ export class ExampleStack extends cdk.Stack {
     super(scope, id, props);
 
     this.createFunction('function-bar',
-      'ExampleSpace::ExampleSpace.ExampleClassBar::Handler'
+      'EXAMPLE::ExampleSpace.ExampleClassBar::Handler'
     );
 
     this.createFunction('function-foo',
-      'ExampleSpace::ExampleSpace.ExampleClassFoo::Handler'
+      'EXAMPLE::ExampleSpace.ExampleClassFoo::Handler'
     );
   }
 
