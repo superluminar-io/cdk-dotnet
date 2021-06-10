@@ -2,25 +2,9 @@ import * as cdk from '@aws-cdk/core';
 import * as Lambda from "@aws-cdk/aws-lambda";
 import * as path from "path";
 
-export class CdkDottingStack extends cdk.Stack {
+export class ExampleStack extends cdk.Stack {
   constructor(scope: cdk.Construct, id: string, props?: cdk.StackProps) {
     super(scope, id, props);
-
-    new cdk.CfnOutput(this, 'ExampleOutput', {
-      value: "testing"
-    })
-
-    // Create AWS Lambda function and push image to ECR
-    new Lambda.DockerImageFunction(this, "function", {
-      code: Lambda.DockerImageCode.fromImageAsset(path.join(__dirname, "../src"), { 
-        buildArgs: {
-          'FUNCTION_NAME': 'Example5'
-        },
-        cmd: ['Example5::Example5.Function::FunctionHandler']
-      }),
-    });
-
-
 
     const buildCommands = [
         "cd /asset-input",
@@ -32,18 +16,15 @@ export class CdkDottingStack extends cdk.Stack {
     ]
 
     // Create AWS Lambda function and push image to ECR
-    new Lambda.Function(this, "function3", {
+    new Lambda.Function(this, "function", {
       runtime: Lambda.Runtime.DOTNET_CORE_3_1,
-      handler: 'Example3::Example3.Function::FunctionHandler',
-      code: Lambda.Code.fromAsset(path.join(__dirname, "../src/Functions/Example3"), { 
+      handler: 'ExampleSpace::ExampleSpace.ExampleClass::Handler',
+      code: Lambda.Code.fromAsset(path.join(__dirname, "../../src/ExampleSpace"), { 
         bundling: {
           image: Lambda.Runtime.DOTNET_CORE_3_1.bundlingImage,
           command: ["bash", "-c", buildCommands.join(" && ")]
         }
       }),
     });
-
-
-    // The code that defines your stack goes here
   }
 }
