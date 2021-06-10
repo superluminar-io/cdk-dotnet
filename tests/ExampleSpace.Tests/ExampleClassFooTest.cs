@@ -5,16 +5,16 @@ using Xunit;
 
 namespace ExampleSpace.Test
 {
-    public class ExampleSpaceTest
+    public class ExampleClassFooTest
     {
         [Fact]
 
         public async void TestHandler()
         {
-            var obj = new ExampleClass();
+            var obj = new ExampleClassFoo();
             var response = await obj.Handler();
 
-            Assert.Equal("Done", response);
+            Assert.Equal("Done: Foo", response);
         }
     }
 }

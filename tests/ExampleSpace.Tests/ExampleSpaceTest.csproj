@@ -1,13 +1,10 @@
 <Project Sdk="Microsoft.NET.Sdk">
     <PropertyGroup>
     <TargetFramework>netcoreapp3.1</TargetFramework>
-    <GenerateRuntimeConfigurationFiles>true</GenerateRuntimeConfigurationFiles>
-    <AssemblyName>ExampleSpaceTest</AssemblyName>
     </PropertyGroup>
       
     <ItemGroup>
     <PackageReference Include="Amazon.Lambda.Core" Version="1.2.0" />
-    <PackageReference Include="Amazon.Lambda.APIGatewayEvents" Version="2.3.0" />
     <PackageReference Include="Amazon.Lambda.Serialization.Json" Version="1.8.0" />
     <PackageReference Include="xunit" Version="2.3.1" />
     <PackageReference Include="xunit.runner.visualstudio" Version="2.3.1" />

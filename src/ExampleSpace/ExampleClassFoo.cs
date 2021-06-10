@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace ExampleSpace
 {
-    public class ExampleClass
+    public class ExampleClassFoo
     {
         [LambdaSerializer(typeof(Amazon.Lambda.Serialization.Json.JsonSerializer))]
 
@@ -18,7 +18,7 @@ namespace ExampleSpace
 
             await Task.WhenAll(task1, task2, task3);
 
-            return "Done";
+            return "Done: Foo";
         }
     }
 }

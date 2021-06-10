@@ -15,10 +15,20 @@ export class ExampleStack extends cdk.Stack {
         "unzip -o -d /asset-output output.zip"
     ]
 
-    // Create AWS Lambda function and push image to ECR
-    new Lambda.Function(this, "function", {
+    new Lambda.Function(this, "function-bar", {
       runtime: Lambda.Runtime.DOTNET_CORE_3_1,
-      handler: 'ExampleSpace::ExampleSpace.ExampleClass::Handler',
+      handler: 'ExampleSpace::ExampleSpace.ExampleClassBar::Handler',
+      code: Lambda.Code.fromAsset(path.join(__dirname, "../../src/ExampleSpace"), { 
+        bundling: {
+          image: Lambda.Runtime.DOTNET_CORE_3_1.bundlingImage,
+          command: ["bash", "-c", buildCommands.join(" && ")]
+        }
+      }),
+    });
+
+    new Lambda.Function(this, "function-foo", {
+      runtime: Lambda.Runtime.DOTNET_CORE_3_1,
+      handler: 'ExampleSpace::ExampleSpace.ExampleClassFoo::Handler',
       code: Lambda.Code.fromAsset(path.join(__dirname, "../../src/ExampleSpace"), { 
         bundling: {
           image: Lambda.Runtime.DOTNET_CORE_3_1.bundlingImage,
