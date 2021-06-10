@@ -8,6 +8,6 @@ node_modules
 cdk.out
 
 
-src/**/bin
-src/**/obj
-src/**/*.zip
+**/bin
+**/obj
+**/*.zip

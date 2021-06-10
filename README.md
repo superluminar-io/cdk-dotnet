@@ -1,14 +1,29 @@
 # Welcome to your CDK TypeScript project!
 
-This is a blank project for TypeScript development with CDK.
+## Usage
 
-The `cdk.json` file tells the CDK Toolkit how to execute your app.
+You need to have the [`dotnet` SDK](https://dotnet.microsoft.com/download/dotnet/3.1) in version 3.1 on your computer.
 
-## Useful commands
+### Build ExampleSpace
 
- * `npm run build`   compile typescript to js
- * `npm run watch`   watch for changes and compile
- * `npm run test`    perform the jest unit tests
- * `cdk deploy`      deploy this stack to your default AWS account/region
- * `cdk diff`        compare deployed stack with current state
- * `cdk synth`       emits the synthesized CloudFormation template
+```bash
+$ > dotnet build src/ExampleSpace/ExampleSpace.csproj --no-restore
+```
+
+### Testing ExampleSpace
+
+```bash
+$ > dotnet test tests/ExampleSpace.Tests/ExampleSpaceTest.csproj --no-restore
+```
+
+## Troubleshooting
+
+```bash
+$ > dotnet --version
+5.0.203
+
+$ > dotnet --list-sdks
+3.1.409 [/usr/local/share/dotnet/sdk]
+3.1.410 [/usr/local/share/dotnet/sdk]
+5.0.203 [/usr/local/share/dotnet/sdk]
+```
