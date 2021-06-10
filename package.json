@@ -8,7 +8,9 @@
     "build": "tsc",
     "watch": "tsc -w",
     "test": "jest",
-    "cdk": "cdk"
+    "cdk": "cdk",
+    "deploy": "yarn cdk deploy",
+    "postdeploy": "rimraf ./src/**/*.zip"
   },
   "devDependencies": {
     "@aws-cdk/assert": "1.107.0",
@@ -16,6 +18,7 @@
     "@types/node": "10.17.27",
     "aws-cdk": "1.107.0",
     "jest": "^26.4.2",
+    "rimraf": "^3.0.2",
     "ts-jest": "^26.2.0",
     "ts-node": "^9.0.0",
     "typescript": "~3.9.7"

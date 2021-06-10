@@ -17,7 +17,7 @@ function fromFolder(folder: string) {
     ]
   }
 
-  return Lambda.Code.fromAsset(path.join(__dirname, folder), { bundling });
+  return Lambda.Code.fromAsset(path.join(__dirname, folder), { bundling, assetHashType: cdk.AssetHashType.SOURCE });
 }
 
 export class ExampleStack extends cdk.Stack {

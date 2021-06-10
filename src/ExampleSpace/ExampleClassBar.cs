@@ -16,7 +16,7 @@ namespace ExampleSpace
 
             await Task.WhenAll(task1, task2, task3);
 
-            return "Done: Bar";
+            return "Done: Bar!";
         }
     }
 }

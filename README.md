@@ -4,6 +4,18 @@
 
 You need to have the [`dotnet` SDK](https://dotnet.microsoft.com/download/dotnet/3.1) in version 3.1 on your computer.
 
+### Dependencies
+
+```bash
+$ > yarn install
+```
+
+### Deployment
+
+```bash
+$ > yarn deploy
+```
+
 ### Clean
 
 ```bash
