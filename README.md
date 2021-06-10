@@ -26,7 +26,7 @@ $ > dotnet clean tests/ExampleSpace.Tests
 ### Build ExampleSpace
 
 ```bash
-$ > dotnet build src/ExampleSpac
+$ > dotnet build src/ExampleSpace
 ```
 
 ### Testing ExampleSpace
