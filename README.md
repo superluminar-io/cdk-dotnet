@@ -14,13 +14,13 @@ $ > dotnet clean tests/ExampleSpace.Tests
 ### Build ExampleSpace
 
 ```bash
-$ > dotnet build src/ExampleSpace/ExampleSpace.csproj
+$ > dotnet build src/ExampleSpac
 ```
 
 ### Testing ExampleSpace
 
 ```bash
-$ > dotnet test tests/ExampleSpace.Tests/ExampleSpaceTest.csproj
+$ > dotnet test tests/ExampleSpace.Tests
 ```
 
 ## Troubleshooting
