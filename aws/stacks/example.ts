@@ -24,15 +24,19 @@ export class ExampleStack extends cdk.Stack {
   constructor(scope: cdk.Construct, id: string, props?: cdk.StackProps) {
     super(scope, id, props);
 
-    new Lambda.Function(this, "function-bar", {
-      runtime: Lambda.Runtime.DOTNET_CORE_3_1,
-      handler: 'ExampleSpace::ExampleSpace.ExampleClassBar::Handler',
-      code: fromFolder("../../src/ExampleSpace")
-    });
+    this.createFunction('function-bar',
+      'ExampleSpace::ExampleSpace.ExampleClassBar::Handler'
+    );
 
-    new Lambda.Function(this, "function-foo", {
+    this.createFunction('function-foo',
+      'ExampleSpace::ExampleSpace.ExampleClassFoo::Handler'
+    );
+  }
+
+  private createFunction(id: string, handler: string) {
+    return new Lambda.Function(this, id, {
+      handler,
       runtime: Lambda.Runtime.DOTNET_CORE_3_1,
-      handler: 'ExampleSpace::ExampleSpace.ExampleClassFoo::Handler',
       code: fromFolder("../../src/ExampleSpace")
     });
   }
