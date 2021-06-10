@@ -4,16 +4,23 @@
 
 You need to have the [`dotnet` SDK](https://dotnet.microsoft.com/download/dotnet/3.1) in version 3.1 on your computer.
 
+### Clean
+
+```bash
+$ > dotnet clean src/ExampleSpace
+$ > dotnet clean tests/ExampleSpace.Tests
+```
+
 ### Build ExampleSpace
 
 ```bash
-$ > dotnet build src/ExampleSpace/ExampleSpace.csproj --no-restore
+$ > dotnet build src/ExampleSpace/ExampleSpace.csproj
 ```
 
 ### Testing ExampleSpace
 
 ```bash
-$ > dotnet test tests/ExampleSpace.Tests/ExampleSpaceTest.csproj --no-restore
+$ > dotnet test tests/ExampleSpace.Tests/ExampleSpaceTest.csproj
 ```
 
 ## Troubleshooting
