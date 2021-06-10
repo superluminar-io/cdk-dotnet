@@ -1,8 +1,6 @@
 using Amazon.Lambda.Core;
-using System.Collections.Generic;
-using System;
-using System.Text.Json;
 using System.Threading.Tasks;
+using System;
 
 namespace ExampleSpace
 {
