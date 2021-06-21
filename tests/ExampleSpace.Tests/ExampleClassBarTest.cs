@@ -11,7 +11,7 @@ namespace ExampleSpace.Test
             var obj = new ExampleClassBar();
             var response = await obj.Handler();
 
-            Assert.Equal("Done: Bar", response);
+            Assert.Equal("Done: Bar!", response);
         }
     }
 }
