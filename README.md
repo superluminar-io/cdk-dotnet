@@ -7,14 +7,20 @@ You need to have the [`dotnet` SDK](https://dotnet.microsoft.com/download/dotnet
 ### Dependencies
 
 ```bash
+# Install yarn
 $ > npm install --global yarn
+
+# Install dependencies
 $ > yarn install
 ```
 
 ### Deployment
 
 ```bash
+# Bootstrap AWS account (once)
 $ > yarn bootstrap
+
+# Deploy infrastructure
 $ > yarn deploy
 ```
 
