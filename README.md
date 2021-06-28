@@ -18,10 +18,10 @@ $ > yarn install
 
 ```bash
 # Bootstrap AWS account (once)
-$ > yarn bootstrap
+$ > yarn cdk bootstrap
 
 # Deploy infrastructure
-$ > yarn deploy
+$ > yarn cdk deploy
 ```
 
 ### Clean
